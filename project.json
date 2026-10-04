@@ -1,0 +1,16 @@
+{
+  "project_name": "PIRED",
+  "model_type": "arabic_encoder",
+  "hf_namespace": null,
+  "paths": {
+    "downloads_dir": "downloads",
+    "tokenizer_dir": "stages/1_tokenizer/tokenizer",
+    "tokenizer_corpus_dir": "stages/1_tokenizer/data",
+    "pretraining_data_dir": "stages/2_mlm_pretraining/data",
+    "mlm_stage_dir": "stages/2_mlm_pretraining",
+    "contrastive_weak_stage_dir": "stages/3_contrastive_weak",
+    "smoke_tests_dir": "_smoke_tests",
+    "supervised_stage_dir": "stages/4_supervised",
+    "evaluation_stage_dir": "stages/5_evaluation"
+  }
+}

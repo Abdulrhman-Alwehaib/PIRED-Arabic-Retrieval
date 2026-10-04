@@ -1,0 +1,13 @@
+/*
+!/.gitignore
+!/README.md
+!/project.json
+!/pyproject.toml
+!/src/
+!/tests/
+.env
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+build/

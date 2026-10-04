@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pired"
+version = "1.0.0"
+description = "PIRED, an Arabic retrieval model: tokenizer, MLM pretraining, contrastive training, supervised fine-tuning, blending and evaluation"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "torch>=2.4",
+    "transformers==5.5.4",
+    "tokenizers==0.22.2",
+    "datasets==5.0.0",
+    "huggingface_hub==1.11.0",
+    "safetensors==0.7.0",
+    "numpy",
+    "pandas",
+    "pyarrow>=15",
+    "regex",
+    "scipy",
+    "requests",
+    "mteb==2.12.10",
+    "sentence-transformers==6.1.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+pired = "pired.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "tests"]
+addopts = "-p no:cacheprovider"
